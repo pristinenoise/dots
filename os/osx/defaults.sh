@@ -114,8 +114,8 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 echo ""
 echo "Setting trackpad & mouse speed to a reasonable number"
-defaults write -g com.apple.trackpad.scaling 2
-defaults write -g com.apple.mouse.scaling 2.5
+#defaults write -g com.apple.trackpad.scaling 2
+#defaults write -g com.apple.mouse.scaling 2.5
 
 echo ""
 echo "Turn off keyboard illumination when computer is not used for 5 minutes"
@@ -132,11 +132,11 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 echo ""
 echo "Enabling subpixel font rendering on non-Apple LCDs"
-defaults write NSGlobalDomain AppleFontSmoothing -int 2
+#defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
 echo ""
 echo "Enable HiDPI display modes (requires restart)"
-sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
+#sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
 
 ###############################################################################
 # Finder
@@ -261,7 +261,7 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 echo ""
 echo "Setting email addresses to copy as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Mail.app"
-defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+#defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
 
 ###############################################################################
@@ -332,11 +332,11 @@ sudo pmset -a standbydelay 86400
 echo ""
 echo "Disable computer sleep and stop the display from shutting off"
 sudo pmset -a sleep 0
-sudo pmset -a displaysleep 0
+# sudo pmset -a displaysleep 0
 
 echo ""
 echo "Disable annoying backswipe in Chrome"
-defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
+# defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 
 ###############################################################################
 # Kill affected applications
